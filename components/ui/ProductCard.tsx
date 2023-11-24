@@ -9,14 +9,24 @@ import { Product } from "@/types";
 
 import IconButton from "./IconButton";
 import Currency from "./Currency";
+import { useRouter } from "next/navigation";
 
 interface IProductCardProps {
   data: Product;
 }
 
 const ProductCard: FC<IProductCardProps> = ({ data }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/product/${data?.id}`);
+  };
+
   return (
-    <div className="bg-white group cursor-pointer rounded-xl border p-3 place-y-4">
+    <div
+      onClick={handleClick}
+      className="bg-white group cursor-pointer rounded-xl border p-3 place-y-4"
+    >
       {/* Images and actions */}
       <div className=" aspect-square rounded-xl bg-gray-100 relative">
         <Image
