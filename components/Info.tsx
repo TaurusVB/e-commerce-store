@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, MouseEventHandler } from "react";
 import { ShoppingCart } from "lucide-react";
 
 import { Product } from "@/types";
@@ -8,11 +8,19 @@ import { Product } from "@/types";
 import Currency from "./ui/Currency";
 import Button from "./ui/Button";
 
+import useCart from "@/hooks/useCart";
+
 interface IInfoProps {
   data: Product;
 }
 
 const Info: FC<IInfoProps> = ({ data }) => {
+  const cart = useCart();
+
+  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+    cart.addItem(data);
+  };
+
   return (
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
@@ -36,7 +44,7 @@ const Info: FC<IInfoProps> = ({ data }) => {
         </div>
       </div>
       <div className="mt-10 flex items-center gap-x-3">
-        <Button className="flex items-center gap-x-2">
+        <Button onClick={onAddToCart} className="flex items-center gap-x-2">
           Add to Cart
           <ShoppingCart />
         </Button>
