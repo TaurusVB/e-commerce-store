@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FakeStore - e-commerce store
 
-## Getting Started
+This is the open-source code for the store created using my other application, [Admin Dashboard](https://github.com/TaurusVB/e-commerce-admin-dashboard). Here you will find the implementation of features such as product filtering, adding products to the cart, popular products, all product categories, secure payment using Stripe, and a product gallery.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+<div align="left">
+  <img height="450" src="https://res.cloudinary.com/dvlinx4rz/image/upload/v1701017786/e-commerce-store_uuvsnr.png"  />
+</div>
+
+###
+
+## Features
+
+1. **Product Filtering:** The store allows users to filter products based on various parameters to find the desired item.
+
+2. **Adding Products to Cart:** Users can add products to the cart and manage their purchases.
+
+3. **Popular Products:** A page showcasing popular products, displaying the best-selling or trending items.
+
+4. **Product Categories:** The store has pages with all product categories for convenient browsing.
+
+5. **Secure Payment:** Utilizes Stripe for ensuring secure payment for products.
+
+6. **Product Gallery:** A gallery page where users can explore products in more detail with additional photos.
+
+ ## Technologies Used
+
+- React
+- Tailwind CSS
+- Next.js
+- Vercel
+
+## Installation and Setup
+
+### Cloning the repository
+
+```shell
+git clone https://github.com/TaurusVB/e-commerce-store
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm i
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Setup .env file
 
-## Learn More
+```js
+NEXT_PUBLIC_API_URL=
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Start the app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```shell
+npm run dev
+```
