@@ -10,8 +10,8 @@ import "./globals.css";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "E-commerce store",
-  description: "E-commerce store",
+  title: "FakeStore | E-commerce store",
+  description: "E-commerce store, FakeStore page",
 };
 
 export default function RootLayout({
