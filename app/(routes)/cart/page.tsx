@@ -18,7 +18,7 @@ const CartPage = () => {
   const cart = useCart();
 
   if (!isMounted) {
-    return <Loading />;
+    return null;
   }
   return (
     <div className=" bg-white">
