@@ -8,6 +8,8 @@ import Gallery from "@/components/gallery";
 import Container from "@/components/ui/Container";
 import Info from "@/components/Info";
 
+export const revalidate = 0;
+
 interface IProductPageProps {
   params: {
     productId: string;
