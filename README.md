@@ -48,6 +48,8 @@ npm i
 
 ```js
 NEXT_PUBLIC_API_URL=
+
+BILLBOARD_ID=
 ```
 
 ### Start the app
